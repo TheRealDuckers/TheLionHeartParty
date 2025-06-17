@@ -363,7 +363,7 @@ cursor: pointer;
       
       <section id="about">
         <h2>Our Main Values</h2>
-        <p onclick="myFunction()" class="values">🏠 Stop the housing crisis</p>
+        <p class="myBtn" class="values">🏠 Stop the housing crisis</p>
         <p class="values">💉 Reform our NHS</p>
         <p class="values">🧧 Tax support for small businesses</p>
         <p class="values">💸 Cut taxes on the working class of Britain</p>
@@ -375,7 +375,16 @@ cursor: pointer;
 		<div class="gallery__entry">…</div>
 	</div>
 </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
       <!-- Join Section -->
       <section id="join">
         <h2>Become a Member</h2>
@@ -412,13 +421,13 @@ cursor: pointer;
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-;
+var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-myfunction() {
+btn.onclick = function() {
   modal.style.display = "block";
 }
 
